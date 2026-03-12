@@ -119,7 +119,7 @@ export default function Dashboard() {
               { icon: "📋", label: "Applications", color: "#f59e0b", path: "/applications" },
               { icon: "📊", label: "Analytics", color: "#3b82f6", path: "/admin/analytics" },
             ].map(action => (
-              <a key={action.label} href={action.path} style={{
+              <link key={action.label} href={action.path} style={{
                 display: "flex", flexDirection: "column", alignItems: "center", justifyContent: "center",
                 padding: "20px 10px", borderRadius: "14px", background: `${action.color}10`,
                 border: `1px solid ${action.color}25`, textDecoration: "none", transition: "all 0.2s", gap: "8px",
@@ -129,7 +129,7 @@ export default function Dashboard() {
               >
                 <span style={{ fontSize: "26px" }}>{action.icon}</span>
                 <span style={{ fontSize: "13px", fontWeight: "700", color: action.color }}>{action.label}</span>
-              </a>
+              </link>
             ))}
           </div>
 
