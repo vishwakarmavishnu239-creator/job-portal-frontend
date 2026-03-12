@@ -71,13 +71,13 @@ export function App() {
   return (
     <BrowserRouter>
       <Routes>
-        {/* Public Routes */}
+        
         <Route path="/" element={<Navigate to="/login" replace />} />
         <Route path="/login" element={<Login />} />
         <Route path="/register" element={<Register />} />
         <Route path="/unauthorized" element={<Unauthorized />} />
 
-        {/* ADMIN Routes */}
+        
         <Route path="/dashboard" element={
           <ProtectedRoute allowedRoles={["ADMIN"]}>
             <Layout><Dashboard /></Layout>
@@ -94,7 +94,7 @@ export function App() {
           </ProtectedRoute>
         } />
 
-        {/* RECRUITER Routes */}
+        
         <Route path="/recruiter/dashboard" element={
           <ProtectedRoute allowedRoles={["RECRUITER"]}>
             <Layout><RecruiterDashboard /></Layout>
@@ -111,7 +111,7 @@ export function App() {
           </ProtectedRoute>
         } />
 
-        {/* CANDIDATE Routes */}
+        
         <Route path="/candidate/dashboard" element={
           <ProtectedRoute allowedRoles={["CANDIDATE"]}>
             <Layout><CandidateDashboard /></Layout>
@@ -128,7 +128,7 @@ export function App() {
           </ProtectedRoute>
         } />
 
-        {/* Shared Routes (admin + recruiter can view) */}
+        
         <Route path="/jobs" element={
           <ProtectedRoute allowedRoles={["CANDIDATE", "RECRUITER", "ADMIN"]}>
             <Layout><Jobs /></Layout>
@@ -140,7 +140,7 @@ export function App() {
           </ProtectedRoute>
         } />
 
-        {/* Catch-all */}
+        
         <Route path="*" element={<Navigate to="/login" replace />} />
       </Routes>
     </BrowserRouter>
