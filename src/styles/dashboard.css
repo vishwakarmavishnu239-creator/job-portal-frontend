@@ -1,0 +1,41 @@
+.sidebar{
+  width:240px;
+  background:#0f172a;
+  color:white;
+  height:100vh;
+  padding:25px;
+}
+
+.sidebar a{
+  display:block;
+  color:#cbd5f1;
+  padding:10px;
+  border-radius:6px;
+  text-decoration:none;
+}
+
+.sidebar a:hover{
+  background:#1e293b;
+  color:white;
+}
+
+.topbar{
+  height:65px;
+  background:white;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  padding:0 25px;
+  border-bottom:1px solid #e5e7eb;
+  
+}
+
+.job-card{
+  height:180px;
+  border-radius:12px;
+  transition:0.3s;
+}
+.job-card:hover{
+  transform:translateY(-6px);
+  box-shadow:0 10px 25px rgba(0,0,0,0.15);
+}
